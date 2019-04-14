@@ -9,6 +9,7 @@ import { SpeakService, ListenService } from 'speech-angular';
 export class TestComponent implements OnInit, OnDestroy {
 
   wakeword: string;
+  wakeFlag =  false;
   prompt = 'Wie wird das Wetter Morgen?';
 
   listenResult: string;
@@ -36,19 +37,26 @@ export class TestComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
 
+    this.speakService.format = 'wav';
+
     this.speakStopEvent = this.speakService.stopEvent.subscribe( () => {
-      // const message = 'Speak: stop';
+      const message = 'Speak: stop';
       this.speakButtonOn = false;
-      // this.messages.push(message);
-      this.startListen();
+      this.messages.push(message);
+      if (this.wakeFlag) {
+        this.speakService.setAudioOff();
+        this.startSpeak();
+      } else {
+        this.startListen();
+      }
       this.ref.detectChanges();
     });
 
-    this.speakErrorEvent = this.speakService.errorEvent.subscribe( (error) => {
-      this.errorFlag = true;
-      this.errorText = 'Error on Speak: ' + error.message ;
-      this.ref.detectChanges();
-    });
+    // this.speakErrorEvent = this.speakService.errorEvent.subscribe( (error) => {
+    //   this.errorFlag = true;
+    //   this.errorText = 'Error on Speak: ' + error.message ;
+    //   this.ref.detectChanges();
+    // });
 
     this.listenResultEvent = this.listenService.resultEvent.subscribe(aText => {
       const message = 'Result: ' + aText;
@@ -57,39 +65,74 @@ export class TestComponent implements OnInit, OnDestroy {
       this.ref.detectChanges();
     });
 
-    this.listenErrorEvent = this.listenService.errorEvent.subscribe( (error) => {
-      this.errorFlag = true;
-      this.errorText = 'Error on Listen: ' + error.message ;
+    this.listenStartEvent = this.listenService.startEvent.subscribe(() => {
+      const message = 'Listen: start';
+      this.messages.push(message);
       this.ref.detectChanges();
     });
+
+    this.listenStopEvent = this.listenService.stopEvent.subscribe(() => {
+      const message = 'Listen: stop';
+      this.messages.push(message);
+      this.ref.detectChanges();
+    });
+
+    // this.listenErrorEvent = this.listenService.errorEvent.subscribe( (error) => {
+    //   this.errorFlag = true;
+    //   this.errorText = 'Error on Listen: ' + error.message ;
+    //   this.ref.detectChanges();
+    // });
 
   }
 
   ngOnDestroy(): void {
     this.speakErrorEvent.unsubscribe();
-
+    this.speakStopEvent.unsubscribe();
+    this.listenStartEvent.unsubscribe();
+    this.listenStopEvent.unsubscribe();
     this.listenResultEvent.unsubscribe();
     this.listenErrorEvent.unsubscribe();
   }
 
   setWakeword(): void {
     console.log(this.wakeword + '. ' + this.prompt);
+    this.messages = [];
     this.listenResult = '';
   }
 
   setPrompt(): void {
     console.log(this.wakeword + '. ' + this.prompt);
+    this.messages = [];
     this.listenResult = '';
   }
 
   startSpeak(): void {
-    const testprompt = this.wakeword + '. ' + this.prompt;
-    this.listenResult = '';
-    this.speakService.text = testprompt;
-    this.speakService.start();
-    const message = 'Prompt: ' + this.prompt;
-    this.messages.push(message);
-    this.ref.detectChanges();
+
+    console.log('wakeFlag: ' + this.wakeFlag);
+
+    if (this.wakeword === 'Hey Siri') {
+      if (this.wakeFlag === false) {
+        const message = 'Wakeword: ' + this.wakeword;
+        this.messages.push(message);
+        this.wakeFlag = true;
+        this.speakService.setAudioOn();
+        this.speakService.file = 'HeySiri';
+        this.speakService.start();
+      } else {
+        this.wakeFlag = false;
+        const message = 'Prompt: ' + this.prompt;
+        this.messages.push(message);
+        this.speakService.text = this.prompt;
+        this.speakService.start();
+      }
+    } else {
+      const testprompt = this.wakeword + '. ' + this.prompt;
+      this.speakService.text = testprompt;
+      this.speakService.start();
+      const message = 'Wakeword + Prompt: ' + this.prompt;
+      this.messages.push(message);
+      this.ref.detectChanges();
+    }
   }
 
   startListen(): void {
