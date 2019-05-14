@@ -12,4 +12,11 @@
 - Ich will einen [Döner](food)
 - Ich will [Eis](food)
 
+## intent:time
+- Es ist 20 Uhr 10 
+- Es ist 17 Uhr 20 
+- Es ist 10 vor 12
+- Es ist 10 nach 12
+
+
 
