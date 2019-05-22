@@ -21,7 +21,7 @@ clean:
 	rm -rf docs/_build
 
 train-nlu:
-	python -m rasa_nlu.train -c nlu_config.yml --data data/nlu_data.md -o models --project current --verbose
+	python -m rasa_nlu.train -c config/nlu_config.yml --data data/nlu_data.md -o models --project current --verbose
 
 run-nlu:
 	python -m rasa_nlu.server --path ./models

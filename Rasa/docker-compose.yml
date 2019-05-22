@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  rasa:
+    image: rasa/rasa_nlu:latest-full
+    ports:
+    - "5000:5000"
+    volumes:
+    - "./models:/app/models"
+    - "./config:/app/config"
+    - "./data:/app/data"
+    command: ["start", "--path", "/app/models",]
+    
+  duckling:
+    image: rasa/duckling:latest
+    ports:
+    - "8000:8000"
+    

@@ -42,3 +42,25 @@ Postman
 
 [DucklingHTTPExtractor](https://rasa.com/docs/nlu/components/#ducklinghttpextractor)
 
+## Docker
+
+Check Docker version and compse-file: [Link](https://docs.docker.com/compose/compose-file/)
+
+[Sample](https://github.com/RasaHQ/rasa/blob/master/docker/docker-compose.yml)
+
+[Blogpost](https://blog.spg.ai/using-rasa-nlu-with-docker-96b86856b392) 
+
+### Run Docker 
+
+        $ docker run -p 8000:8000 rasa/duckling
+        $ docker run rasa/rasa_nlu:latest-full -p5000:5000
+
+### Run Docker Compose
+
+        $ docker-compose up
+
+### Check Rasa NLU Container
+
+        $ docker ps
+        $ docker exec -it rasa_rasa_1 /bin/bash
+        $ exit
