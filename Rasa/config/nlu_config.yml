@@ -10,7 +10,7 @@ pipeline:
   - name: "ner_crf"
   - name: "ner_duckling_http"
     # url of the running duckling server
-    url: "http://localhost:8000"
+    url: "http://duckling:8000"
     # dimensions to extract
     dimensions: ["time"]
     # allows you to configure the locale, by default the language is
