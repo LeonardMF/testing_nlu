@@ -2,7 +2,7 @@ version: '3.7'
 
 services:
   rasa:
-    image: rasa/rasa_nlu:latest-full
+    image: rasa/rasa_nlu:0.13.8-spacy
     ports:
     - "5000:5000"
     volumes:
