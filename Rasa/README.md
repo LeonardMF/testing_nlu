@@ -2,6 +2,14 @@
 
 Testing using Rasa NLU 
 
+## Create Virtual Environment
+
+Follow the instruction in der [Docs](https://docs.python.org/3/tutorial/venv.html):
+
+    $ python3 -m venv Rasa
+    $ source Rasa/bin/activate
+
+More Info in this [blogpost](https://medium.com/@jtpaasch/the-right-way-to-use-virtual-environments-1bc255a0cba7)
 
 ## Installation
 
@@ -63,4 +71,4 @@ Check Docker version and compse-file: [Link](https://docs.docker.com/compose/com
 
         $ docker ps
         $ docker exec -it rasa_rasa_1 /bin/bash
-        $ exit
+        # exit
