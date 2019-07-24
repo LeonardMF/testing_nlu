@@ -1,0 +1,19 @@
+# environment
+venv
+
+# ide
+.vscode
+
+# python
+__pycache__
+
+# rasa
+rasa_core
+out.log
+rasa_core.log
+rasa.db
+tracker.db
+
+graph.html
+models
+
