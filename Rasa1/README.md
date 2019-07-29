@@ -7,7 +7,6 @@ The Chatbot functionallty of Rasa CORE is handled by the Test Manager, the [Usin
 
 Python >= 3.7.4
 
-
 ## Create Virtual Environment
 
 Follow the instruction in der [Docs](https://docs.python.org/3/tutorial/venv.html) and [Blog](https://medium.com/@jtpaasch/the-right-way-to-use-virtual-environments-1bc255a0cba7):
@@ -65,15 +64,14 @@ Taken from [spacy.io](https://spacy.io/models/de).
 
 ## Run Rasa on server
 
-    $ rasa run --enable-api -m models/nlu-20190725-013745.tar.gz 
-     --cors "*"
+    $ rasa run --enable-api -m models/nlu-20190728-223910.tar.gz --cors "*"
+
+    $ rasa run --enable-api -m models --cors "*"
 
     [Docs](https://rasa.com/docs/rasa/nlu/using-nlu-only/)
-    
-## Know Errors: 
 
 
-## Run Docker 
+## Run Docker s
 
     $ docker run -p 8000:8000 rasa/duckling
     $ docker run rasa/rasa:latest-full -p5000:5000

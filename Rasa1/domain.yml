@@ -1,31 +1,34 @@
 intents:
-  - greet
-  - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
+  - getTime
+  - getTimeLocation
+  - startTest
+  - noResponse
+  - greeting
+  - request
+  - connection
 
 actions:
-- utter_greet
-- utter_cheer_up
-- utter_did_that_help
-- utter_happy
-- utter_goodbye
+- utter_time
+- utter_lissabon
+- utter_time_lissabon
+- action_hello_world
+
+entities:
+ - wakeword
+
+slots:
+  wakeword:
+    type: text
+    initial_value: "Ok Google"
+
 
 templates:
-  utter_greet:
-  - text: "Hey! How are you?"
 
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
+  utter_time:
+  - text: "{wakeword}, Wie viel Uhr ist es?"
 
-  utter_did_that_help:
-  - text: "Did that help you?"
+  utter_lissabon:
+  - text: "{wakeword}, Und in Lissabon?"
 
-  utter_happy:
-  - text: "Great carry on!"
-
-  utter_goodbye:
-  - text: "Bye"
+  utter_time_lissabon:
+  - text: "{wakeword}, Wie viel Uhr ist es in Lissabon?"
