@@ -1,0 +1,19 @@
+version: '3.3'
+
+services:
+  rasa:
+    image: rasa/rasa:1.1.8-spacy-de
+    ports:
+    - "5005:5005"
+    volumes:
+    - "./:/app"
+    command: ["run", "-m", "models", "--enable-api", "--cors", "*"]
+
+
+  duckling:
+    image: rasa/duckling:latest
+    ports:
+    - "8000:8000"
+    expose:
+    - "8000" 
+    
