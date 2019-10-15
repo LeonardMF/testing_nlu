@@ -1,13 +1,15 @@
-# Test NLU
+# TestNLU for Voice User Interfaces
+
+The TestNLU ist part of the Test Environment for Voice user Interfaces, which has been developed in the thesis [Automatisiertes Testen von dialogfähigen Sprachassistenten]().
 
 The Test NLU uses [Rasa 1.0](http://rasa.com/docs/rasa/) Stack.
-The Chatbot functionallty of Rasa CORE is handled by the Test Manager, the [Using only NLU](https://rasa.com/docs/rasa/nlu/using-nlu-only/) approach has been used.
+[Using only NLU](https://rasa.com/docs/rasa/nlu/using-nlu-only/) approach has been used, since the Chatbot functionality of Rasa CORE is handled by the Test Manager in the [Frontend]().
 
 ## Prerequisites
 
 Python >= 3.7.4
 
-## Create Virtual Environment
+### Create Virtual Environment
 
 Follow the instruction in der [Docs](https://docs.python.org/3/tutorial/venv.html) and [Blog](https://medium.com/@jtpaasch/the-right-way-to-use-virtual-environments-1bc255a0cba7):
 
@@ -16,7 +18,7 @@ Follow the instruction in der [Docs](https://docs.python.org/3/tutorial/venv.htm
 
     $ source venv/bin/activate
 
-## Select Interpreter (VS Code)
+#### Select Interpreter (VS Code)
 
 To select a specific environment, use the Command Palette (⇧⌘P).
 Type in ```Python: Select Interpreter``` and select ```./venv/bin/python```.
