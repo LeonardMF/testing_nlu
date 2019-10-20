@@ -1,17 +1,13 @@
 intents:
   - getTime
-  - getTimeLocation
-  - startTest
+  - question
   - noResponse
-  - greeting
-  - request
-  - connection
 
 actions:
 - utter_time
 - utter_lissabon
 - utter_time_lissabon
-- action_hello_world
+
 
 entities:
  - wakeword
