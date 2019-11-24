@@ -40,15 +40,15 @@
 - In [Lissabon](city) ist es Montag um 11:15 Uhr
 - In [Lissabon](city) ist es Dienstag um 11:15 Uhr
 
-## intent:question
-- Hast du noch einen Frage? 
+## intent:request
+- Hast du noch eine Frage? 
 - Noch eine Frage? 
 - Kann ich weiterhelfen? 
 
 ## intent:noResponse
 - Keine Antwort
 - Das kann ich leider nicht
-- Das kann ich nocht nicht 
+- Das kann ich noch nicht 
 - Weis ich nicht 
 - Weis ich leider nicht 
 - Kann ich dir nicht sagen

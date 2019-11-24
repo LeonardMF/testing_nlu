@@ -1,5 +1,5 @@
 # Configuration for Rasa NLU.
-# https://rasa.com/docs/rasa/nlu/components/ 
+# https://rasa.com/docs/rasa/nlu/components/
 language: de
 pipeline: 
   - name: SpacyNLP
@@ -7,8 +7,14 @@ pipeline:
   - name: SpacyFeaturizer
   - name: RegexFeaturizer
   - name: CRFEntityExtractor
+  - name: DucklingHTTPExtractor
+    url: http://duckling:8000
+    dimensions: ['time']
+    locale: de_DE
+    timezone: Europe/Berlin
   - name: EntitySynonymMapper
   - name: SklearnIntentClassifier
+  
 
 # Configuration for Rasa Core.
 # https://rasa.com/docs/rasa/core/policies/

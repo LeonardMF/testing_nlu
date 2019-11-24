@@ -1,0 +1,48 @@
+## intent:getPresident
+\n- [Abraham Lincoln](name) war der 16. Präsident der Vereinigten Staaten.
+\n- [Abraham Lincoln](name)
+\n- [Abraham Lincoln](name)
+\n- [Abraham Lincoln](name)
+\n- Der 16. Präsident der Vereinigten Staaten war [Abraham Lincoln](name)
+\n
+\n## intent:getAgeDead
+\n- Er starb im Alter von [56](age) Jahren.
+\n- [56](age) Jahre
+\n- [56](age)
+\n- Er wurde [56](age) Jahre alt
+\n- Er ist [56](age) Jahre alt geworden
+\n- Das Sterbealter von [Abraham Lincoln](name) war [56](age)
+\n
+\n## intent:getCityBorn
+\n- [Hodgenville](city), KY
+\n- [Hodgenville](city)
+\n- Er wurde in [Hodgenville](city) geboren
+\n- in hudsonville
+\n- im hudsonville
+\n- im hodgenville
+\n- in [Hodgenville](city)
+\n- in [hodgenville](city)
+\n- in [hodgenville](city)
+\n
+\n## intent:getRestaurant
+\n- Es gibt mindestents zehn Einträge für Restaurants in [hodgenville](city)
+\n- Es gibt sechs Einträge für Restaurants in [hodgenville](city)
+\n- es gibt mindestens 10 Einträge der erste Eintrag [hodgenville](city) Grill
+\nist 7332 km entfernt und mit 4,5 Sternen bewertet
+\n- es gibt mindestens 10 Einträge für Restaurants
+\n- es gibt mindestens 10 Einträge 
+\n- der erste Eintrag [hodgenville](city) Grill ist 7332 km entfernt und mit 4,5 Sternen bewertet
+\n- Hier sind einige Restaurants
+\n- Hier sind Restaurants
+\n- ich habe in der Nähe von [hodgenville](city) mehrere Orte für top-bewertete Restaurants gefunden
+\n- ich habe in der Nähe von [hodgenville](city) mehrere Orte für top-bewertete Restaurants gefunden
+\n
+\n## intent:noResponse
+\n- meine Websuche hat das hier ergeben
+\n- im Web habe ich das hier gefunden
+\n- meine Suche hat das hier ergeben
+\n- schau in de App nach
+\n- meine Websuche hat das hier ergeben
+\n- im Web habe ich das hier gefunden
+\n- schau in de App nach
+\n
