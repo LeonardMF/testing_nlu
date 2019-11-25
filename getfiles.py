@@ -1,4 +1,4 @@
-filepath = 'data/vui/nlu.md'
+filepath = 'data/hvv/nlu.md'
 
 string = ""
 with open(filepath) as fp:
@@ -6,7 +6,7 @@ with open(filepath) as fp:
        string += line+"\\n"
 
 
-filepath = 'data/vui/nlu.txt'
+filepath = 'data/hvv/nlu.txt'
 f = open(filepath,"w")
 f.write(string)
 

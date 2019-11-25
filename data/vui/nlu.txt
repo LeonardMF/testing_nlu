@@ -1,8 +1,9 @@
 ## intent:getPresident
 \n- [Abraham Lincoln](name) war der 16. Präsident der Vereinigten Staaten.
+\n- [Abraham Lincoln](name) war der 16. Präsident der Vereinigten Staaten.
 \n- [Abraham Lincoln](name)
 \n- [Abraham Lincoln](name)
-\n- [Abraham Lincoln](name)
+\n- Der 16. Präsident der Vereinigten Staaten war [Abraham Lincoln](name)
 \n- Der 16. Präsident der Vereinigten Staaten war [Abraham Lincoln](name)
 \n
 \n## intent:getAgeDead
@@ -12,17 +13,32 @@
 \n- Er wurde [56](age) Jahre alt
 \n- Er ist [56](age) Jahre alt geworden
 \n- Das Sterbealter von [Abraham Lincoln](name) war [56](age)
+\n- er starb am 15. April 1865
+\n- er starb in Washington DC
+\n- er starb mit [56](age) Jahre 
+\n- [Abraham Lincoln](name) start mit [56](age) Jahre
+\n- er starb an Ermordung
+\n- * starb mit [56](age) Jahre
+\n- [Abraham Lincoln](name) starb am 15. April 1865. [Abraham Lincoln](name) starb in Washington DC. [Abraham Lincoln](name) starb mit 56 Jahre. [Abraham Lincoln](name) starb an Ermordung
+\n
 \n
 \n## intent:getCityBorn
 \n- [Hodgenville](city), KY
 \n- [Hodgenville](city)
-\n- Er wurde in [Hodgenville](city) geboren
+\n- er wurde in [Hodgenville](city) geboren
 \n- in hudsonville
 \n- im hudsonville
 \n- im hodgenville
 \n- in [Hodgenville](city)
 \n- in [hodgenville](city)
 \n- in [hodgenville](city)
+\n- er wurde in [hodgenville](city) geboren
+\n- * wurde in [hodgenville](city) geboren
+\n- er wurde in [hodgenville](city) geboren
+\n- * wurde in [hodgenville](city) geboren
+\n- geboren wurde er in [hodgenville](city)
+\n- sein Geburtsort ist [hodgenville](city) 
+\n- [Abraham Lincoln](name) wurde in [hodgenville](city)  geboren
 \n
 \n## intent:getRestaurant
 \n- Es gibt mindestents zehn Einträge für Restaurants in [hodgenville](city)
