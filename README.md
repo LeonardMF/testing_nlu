@@ -56,6 +56,8 @@ Taken from [spacy.io](https://spacy.io/models/de).
     $ pip freeze > requirements.txt
     $ git add requirements.txt
 
+    $ git install -r requirements.txt
+
 ## Init Rasa
 
     $ rasa init
